@@ -12,9 +12,13 @@ Dado uma lista $A$ com os valores $A_0,A_1,A_2,...,A_{n-1}$ ordenada de tal modo
 
 1. Defina $L$ para $0$ e $R$ para $n - 1$.
 2. Enquanto $L \leq R$, faça:
+   
     a. Defina $m$ para $L + \lfloor(R - L) / 2\rfloor$, ou seja, o meio do intervalo de busca.
+   
     b. Se $A_m < T$, defina $L$ para $m + 1$ e recomece o laço de repetição.
+   
     c. Se $A_m > T$, defina $R$ para $m - 1$ e recomece o laço de repetição.
+   
     e. Se $A_m = T$, a pesquisa está feita, e a posição de $T$ é $m + 1$.
 
 ### Pseudocódigo:

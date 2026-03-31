@@ -47,7 +47,7 @@ O código implementado em C++ pode ser acessado clicando aqui: [BINARY SEARCH](b
 ### Complexidade de Tempo:
 
 - Melhor caso: $O(1)$ - Elemento encontrado na primeira comparação.
-- Pior caso: $O(lg\,n)$
+- Pior caso: $O(lg n)$
 
 ### Complexidade de Espaço:
 

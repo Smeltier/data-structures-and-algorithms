@@ -5,10 +5,10 @@
 class LinkedList {
   private:
     class Node {
-    public:
+      public:
         int value;
         Node* next;
-        Node(int val) : value(val), next(nullptr) {}
+        Node(const int value) : value(value), next(nullptr) {}
     };
 
     Node* head = nullptr;

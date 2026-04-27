@@ -53,12 +53,12 @@ void LinkedList::insert_at(const int value, const std::size_t position) {
 void LinkedList::pop_front() {
   if (!head) return;
 
-  Node* temp = head;
+  Node* to_delete = head;
   head = head->next;
 
   if (!head) tail = nullptr;
 
-  delete temp;
+  delete to_delete;
   current_size--;
 }
 

@@ -7,7 +7,7 @@ HashTable::HashTable() : table(0, -1), current_size(0) {}
 HashTable::HashTable(const size_t size) : table(size, -1), current_size(0) {}
 
 int HashTable::hash(const int key) const {
-  return (key) % (int)table.size();
+  return ((key % (int)table.size()) + (int)table.size()) % (int)table.size();
 }
 
 void HashTable::insert(const int key) {
@@ -18,7 +18,7 @@ void HashTable::insert(const int key) {
   int start_index = hash(key);
   int index = start_index;
 
-  for (size_t i = 0; i < (int)table.size(); ++i) {
+  for (size_t i = 0; i < table.size(); ++i) {
     if (table[index] == -1) {
       table[index] = key;
       current_size++;
@@ -36,7 +36,7 @@ void HashTable::remove(const int key) {
 
   int index = hash(key);
 
-  for (size_t i = 0; i < (int)table.size(); ++i) {
+  for (size_t i = 0; i < table.size(); ++i) {
     if (table[index] == key) {
       table[index] = -1;
       current_size--;
@@ -54,7 +54,7 @@ bool HashTable::search(const int key) const {
 
   int index = hash(key);
 
-  for (size_t i = 0; i < (int)table.size(); ++i) {
+  for (size_t i = 0; i < table.size(); ++i) {
     if (table[index] == key) {
       return true;
     }

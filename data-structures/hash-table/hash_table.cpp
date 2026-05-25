@@ -15,8 +15,7 @@ void HashTable::insert(const int key) {
     return;
   }
 
-  int start_index = hash(key);
-  int index = start_index;
+  int index = hash(key);
 
   for (size_t i = 0; i < table.size(); ++i) {
     if (table[index] == -1) {

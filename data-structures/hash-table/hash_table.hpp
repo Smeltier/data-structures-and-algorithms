@@ -4,29 +4,29 @@
 
 class HashTable {
 private:
-  std::vector<int> table;
-  size_t current_size;
+    std::vector<int> table;
+    size_t current_size;
 
-  int hash(const int key) const;
+    int hash(const int key) const;
 
 public:
-  HashTable();
+    HashTable();
 
-  HashTable(const size_t size);
+    HashTable(const size_t size);
 
-  void insert(const int key);
+    void insert(const int key);
 
-  void remove(const int key);
+    void remove(const int key);
 
-  bool search(const int key) const;
+    bool search(const int key) const;
 
-  void print() const;
+    void print() const;
 
-  size_t max_size() const;
+    size_t max_size() const;
 
-  size_t size() const;
+    size_t size() const;
 
-  bool empty() const;
+    bool empty() const;
 
-  bool full() const;
+    bool full() const;
 };
